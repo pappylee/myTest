@@ -1,0 +1,141 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="">
+	.global{
+  display: flex;
+  border: 5px solid #5b7f3d;
+  width: 1300px;
+  height: 575px;  
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;  
+}
+
+.quotes{  
+  width: 900px;
+  height: 160px;
+  text-align: center;
+  border-bottom: 5px solid #5b7f3d;
+}
+
+.image-container{
+  border-top: 5px solid #5b7f3d; 
+  border-bottom: 5px solid #5b7f3d;
+  width: 900px;
+  height: 400px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+
+}
+
+.author{  
+  width: 900px;
+  height: 70px;
+  text-align: center;
+}
+
+.button{
+	height: 40px;
+	width: 900px;
+	text-align: center;
+	padding: 5px;
+}
+
+#myButton{
+	background-color: #7e2c55;
+	color: white;
+	height: 40px;
+	border-radius: 30rem;
+}
+
+.author-image{
+	
+
+}
+
+
+
+	</style>
+
+	
+</head>
+<body>
+
+	<div class="global">
+  <div class="author"> 
+    <h1 id="ade">Obafemi Awolowo</h1>
+  </div>
+  <div class="image-container"> 
+
+    <!--<h1>IMAGES</h1> -->
+
+	<img id="author-image" src="PICTURES/Awo.jpg" name="sesan" alt="Author's photo">
+  </div>
+  <div class="quotes">
+    <h1 id="qt">All is fair in war, and starvation is one of the weapons of war. I don't see why we should feed our enemies fat in order for them to fight harder.</h1>
+  </div>
+  <div class="button">
+  	<button type="button" id="myButton" onclick="myFunction()">Random Quotes</button>
+  </div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+	/***CONSTRUCTING AN ARRAY***/
+const theQuotes = [{author: "Obafemi Awolowo", quote: "All is fair in war, and starvation is one of the weapons of war. I don't see why we should feed our enemies fat in order for them to fight harder.", image_photo: "Awo.jpg"}, {author: "M. K. O. Abiola", quote: "You cannot shave a man's head in his absence", image_photo: "Abiola.jpg"}, {author: "Chief Bola Ige", quote: "In politics, there is no permanent friend and there is no permanent enemy", image_photo: "Ige.jpg"}, {author: "Nelson mandela", quote: "A winner is a dreamer who never gives up", image_photo: "Mandela.jpg"}, {author: "Olusegun Obasanjo", quote: "If I am not above the law, nobody in this country can then claim to be above the law.", image_photo: "Obasanjo.jpg"}, {author: "Isaac Newton", quote: "If I have seen further, it is by standing on the shoulders of giants", image_photo: "Newton.jpg"}, {author: "J. F Kennedy", quote: "Ask not what your country can do for you, but what you can do for your country.", image_photo: "Kennedy.jpg"}, {author: "Desmond Tutu", quote: "Do your little bit of good where you are; it's those little bits of good put together that overwhelm the world.", image_photo: "Tutu.jpg"}, {author: "Martin Luther King Jr", quote: "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin, but by the content of their character", image_photo: "Martin_Luther.jpg"}, {author: "Adolf Hitler", quote: "Do not compare yourself to others. If you do so, you are insulting yourself.", image_photo: "Hitler.jpg"}, {author: "Professor Wole Soyinka", quote: "The greatest threat to freedom is the absence of criticism.", image_photo: "Soyinka.jpg"}, {author: "Mahatma Gandhi", quote: "Happiness is when what you think, what you say, and what you do are in harmony.", image_photo: "Gandhi.jpg"}, {author: "Socrates", quote: "True wisdom comes to each of us when we realize how little we understand about life, ourselves and the world around us.", image_photo: "Socrates.jpg"}, {author: "Pope John Paul II", quote: "Love between man and woman cannot be built without sacrifices and self-denial.", image_photo: "Pope.jpg"}];
+
+/****HERE IS TO GENERATE A RANDOM NUMBER WITH WITH MAX OF THE LENGTH OF THE ARRAY****/
+function myFunction(){
+
+const num = Math.floor(Math.random()*theQuotes.length);
+
+/***USING THE GENERATED RANDOM NUMBER TO CALL THE AUTHOR, HIS QUOTE AND HIS PICTURE***/
+
+console.log(theQuotes[num].author);
+console.log(theQuotes[num].quote);
+
+ 
+ document.getElementById("ade").innerHTML=theQuotes[num].author;
+ document.getElementById("qt").innerHTML=theQuotes[num].quote;
+//  const path2 = theQuotes[num].image_photo;
+// const path1 = 'C:\\Users\\Joel Salako\\Desktop\\MY ASSIGNMENT\\PICTURES\\';
+// const path3 = '\"';
+// const path4 = ' alt '
+// const path5 = '=';
+// const path6 = "\"Author's Photo\"";
+// const path = path1+path2+path3+path4+path5+path6;
+document.sesan.src="PICTURES/"+theQuotes[num].image_photo;
+//document.getElementById("image").attr('src',"PICTURES/"+theQuotes[num].image_photo);
+
+}
+
+
+
+
+/*function getRandomImage() {
+const path2 = theQuotes[num].image_photo;
+const path1 = 'C:\\Users\\Joel Salako\\Desktop\\MY ASSIGNMENT\\PICTURES\\';
+const path3 = '\"';
+const path4 = " alt"
+const path5 = "=";
+const path6 = "\"Author's Photo\"";
+const path = path1+path2+path3+path4+path5+path6;
+document.write(path); document.close();
+  
+}*/
+
+
+
+
+
+
+
+	</script>
+</html>
